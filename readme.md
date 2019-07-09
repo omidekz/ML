@@ -10,3 +10,8 @@
     - [Candidate-Elimination](supervised/2_candidate_elimination)
     - Decision-Tree
   
+# in addition:
+- learning can be:
+    - incremental or batch
+    - online or offline
+    - 
