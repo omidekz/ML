@@ -4,3 +4,4 @@
 
 # pycharm idea
 /.idea
+__pycache__
