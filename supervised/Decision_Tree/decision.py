@@ -43,6 +43,11 @@ def make_branches(attr, domain, instances):
 
 
 def entropy(instances):
+    """
+    count positive, negative instances and calc entropy
+    :param instances: List[Model]
+    :return: entropy - float
+    """
     pos = 0
     neg = 0
     for ins in instances:
