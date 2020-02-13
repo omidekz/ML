@@ -20,6 +20,16 @@ class Model(ABC):
 
 
 def make_branches(attr, domain, instances):
+    # branches shape:
+    # dict(
+    #       attribute_name:
+    #           List[
+    #               positive_number,
+    #               negative_number,
+    #               List[positive_instances],
+    #               List[negative_instances]
+    #           ]
+    # )
     branches = dict([(d, [0, 0, [], []]) for d in domain])
     for ins in instances:
         key = ins.get_value(attr)
