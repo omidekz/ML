@@ -59,6 +59,14 @@ def entropy(instances):
 
 
 def entropy_zero(pos, neg, _all):
+    """
+    gets pos, neg, all value and calc below formula
+    Ppos * log2(Ppos) - Pneg * log2(Pneg)
+    :param pos: positive number - int
+    :param neg: negative number - int
+    :param _all: all instances number - int [often equal to pos + neg]
+    :return: entropy value
+    """
     if _all == 0:
         return 0
     pp = pos / _all
