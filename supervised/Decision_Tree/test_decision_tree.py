@@ -26,7 +26,7 @@ def max_gain(instances, labels, entropy=None):
         entropy = decision.entropy(instances)
     _max, label = None, None
     for lab in labels:
-        _val = decision.ig(entropy, instances, lab, instances[0].get_domain(lab))
+        _val = decision.information_gain(entropy, instances, lab, instances[0].get_domain(lab))
         if _max is None or _val > _max:
             _max = _val
             label = lab
