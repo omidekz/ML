@@ -74,7 +74,16 @@ def entropy_zero(pos, neg, _all):
     return -pp * (math.log2(pp) if pp != 0 else 0) - pn * (math.log2(pn) if pn != 0 else 0)
 
 
-def ig(ant, instances, attr, domain: list) -> float:
+def information_gain(ant, instances, attr, domain: list) -> float:
+    """
+    gets entropy, instances, attribute, domain and return information gain\n
+    entropy - sigma(1, len(domain)) ((posi+negi)/len(instances)) * entropy_zero(posi, negi, posi+negi)\n
+    :param ant: entropy float
+    :param instances: List[Model]
+    :param attr: attribute
+    :param domain: list attribute domain
+    :return:
+    """
     if ant is None:
         ant = entropy(instances)
     instances: List[Model] = instances
