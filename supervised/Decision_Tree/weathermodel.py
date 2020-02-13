@@ -1,7 +1,7 @@
-from . import decisionmodel
+from . import decision
 
 
-class WeatherModel(decisionmodel.Model):
+class WeatherModel(decision.Model):
 
     def __init__(self, **_attrs):
         self._attrs = _attrs
@@ -23,3 +23,9 @@ class WeatherModel(decisionmodel.Model):
 
     def get_value(self, key):
         return self._attrs.get(key)
+
+    def __str__(self):
+        return str(self._attrs.get('number'))
+
+    def __repr__(self):
+        return self.__str__()
